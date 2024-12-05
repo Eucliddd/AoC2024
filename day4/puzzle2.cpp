@@ -18,8 +18,11 @@ int solve(const vector<string>& matrix){
     for(int i = 1; i < n - 1; ++i){
         for(int j = 1; j < m - 1; ++j){
             if (matrix[i][j] == 'A'){
-                if (((matrix[i - 1][j - 1] == 'M' && matrix[i + 1][j + 1] == 'S') || (matrix[i - 1][j - 1] == 'S' && matrix[i + 1][j + 1] == 'M'))
-                    && ((matrix[i - 1][j + 1] == 'M' && matrix[i + 1][j - 1] == 'S') || (matrix[i - 1][j + 1] == 'S' && matrix[i + 1][j - 1] == 'M'))){
+                if (((matrix[i - 1][j - 1] == 'M' && matrix[i + 1][j + 1] == 'S') 
+                    || (matrix[i - 1][j - 1] == 'S' && matrix[i + 1][j + 1] == 'M'))
+                    && ((matrix[i - 1][j + 1] == 'M' && matrix[i + 1][j - 1] == 'S') 
+                    || (matrix[i - 1][j + 1] == 'S' && matrix[i + 1][j - 1] == 'M')))
+                {
                     res++;
                 }
             }
